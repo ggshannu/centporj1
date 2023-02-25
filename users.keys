@@ -1,0 +1,9 @@
+#!/bin/sh
+for u in   sshusers.txt
+do
+echo $u
+sudo su - $u
+mkdir .ssh; chmod 700 .ssh; cd .ssh; ssh-keygen -f id_rsa -t rsa -N '';
+chmod 600 /users/$u/.ssh/*;
+cp id_rsa.pub authorized_keys
+done
