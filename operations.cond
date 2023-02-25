@@ -1,0 +1,13 @@
+Logical Operators for Files:
+
+Operator		Description										Example
+-e				file exists										[[ -e /path/to/file ]]
+-f				file is a regular file,/not a directory			[[ -f /path/to/file ]]
+-d				File is a directory								[[ -d /path/to/directory ]]
+-s				File is not zero size							[[ -s /path/to/file ]]
+-L				File is symbolic link							[[ -L /path/to/file ]]
+-b				File is a block device							[[ -b /path/to/file ]]
+-p				File is a pipe device							[[ -p /path/to/file ]]
+-S				File is a socket								[[ -S /path/to/file ]]
+-r				File has read permission for user.				[[ -r /path/to/file ]]
+-w				File has write permission for user.				[[ -w /path/to/file ]]
