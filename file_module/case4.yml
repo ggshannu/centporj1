@@ -1,0 +1,10 @@
+---
+  - name: To create a file with content
+    hosts: prod
+    tasks: 
+    - name: to create file with content
+      copy: 
+       dest: "/tmp/file5"
+       content: |
+         line 01
+         line 02

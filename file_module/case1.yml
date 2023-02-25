@@ -1,0 +1,12 @@
+---
+  - name: To create a file & directory
+    hosts: prod
+    tasks: 
+    - name: using file module to create a file
+      file: dest=/tmp/file1 state=touch
+    - name: using file module to create a directory
+      file: dest=/tmp/dir1 state=directory
+    - name: using file module to remove a file 
+      file: dest=/tmp/file1 state=absent
+    - name: using file module to remove directory
+      file: dest=/tmp/dir1 state=absent

@@ -1,0 +1,8 @@
+---
+  - name: TO define file and directory permission
+    hosts: prod
+    tasks: 
+    - name: To create a file with permission 
+      file: dest=/tmp/file1 state=touch mode=666
+    - name: To create a directory with permission
+      file: dest=/tmp/dir1 state=directory mode=777

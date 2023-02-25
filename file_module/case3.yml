@@ -1,0 +1,8 @@
+--- 
+  - name: TO create a file with ownership and permission
+    hosts: prod
+    tasks: 
+    - name: To create file with owner and permission
+      file: dest=/tmp/file2 state=touch owner=vara group=vara mode=666
+    - name: To create directory with owner and permission
+      file: dest=/tmp/dir2 state=directory owner=vara group=vara mode=744

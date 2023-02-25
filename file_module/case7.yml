@@ -1,0 +1,10 @@
+--- 
+  - name: exiting file permisiion change
+    hosts: prod
+    tasks: 
+    - name: change the permission
+      file:
+       path: /opt/aa
+       owner: vara
+       group: vara
+       mode: '666'

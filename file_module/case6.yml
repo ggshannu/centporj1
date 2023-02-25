@@ -1,0 +1,18 @@
+---
+  - name: Creating multiple files
+    hosts: prod
+    tasks:
+    - name: using file module to create multiple files
+      file:
+       path: /tmp/ "{{ item }}"  ## it defines where you will create multiple files.
+       state: touch
+      with_items:  ###this parameter is used to start a list of files to create.
+      - test01
+      - test02
+      - test03
+      - test04
+
+#path: "{{ item}}" ----> it means that ansible will create a separate path for each respective file.By default this
+#files locatied in remote host home folder like /root/
+#Define a different path by using /your_folder_path "{{ item }}"
+#ex: path: /tmp/ "{{ item}}"

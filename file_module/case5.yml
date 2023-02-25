@@ -1,0 +1,13 @@
+---
+  - name: To create a content of an  exiting file
+    hosts: prod
+    tasks: 
+    - name: exiting file to create content
+      copy: 
+       dest: "/tmp/file5"
+       content:
+         line 01
+         line 02
+         line 03 
+         line 04
+
