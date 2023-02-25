@@ -1,0 +1,23 @@
+---
+  - name: 
+    hosts: prod
+    tasks:
+    - yum: "name=httpd state=present" 
+      register: http_output
+    - debug: var=http_output.stdout
+    - name: Second Task
+      yum: "name=vsftpd state=present"
+      register: vsftp_output
+    - debug: var=vsftp_output.stdout
+    - name: Third task
+      yum: "name=samba state=present"
+      register: samba_output
+    - debug: var=samba_output
+    - name: fourth Task
+      yum: "name=finger state=present"
+      register: finger_output
+    - debug: var=finger_output.stdout
+    - name: task5 
+      yum: "name=ypserv state=present"
+      register: ypserv_output
+    - debug: var=ypserv_output.stdout
