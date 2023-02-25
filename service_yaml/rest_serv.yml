@@ -1,0 +1,32 @@
+---
+  - name: To start the service
+    hosts: prod
+    tasks: 
+     - name: task1 
+       service: name=httpd state=restarted
+       register: http_started
+     - debug: var=http_started
+     - name: task2
+       service: name=vsftpd state=restarted
+       register:  vsftp_started
+     - debug: var=vsftp_started
+     - name: Task3
+       service: name=smb state=restarted
+       register: smb_started
+     - debug: var=smb_started
+     - name: Task4
+       service: name=nfs state=restarted
+       register: nfs_started
+     - debug: var=nfs_started
+     - name: Task5
+       service: name=autofs state=restarted
+       register: autofs_started
+     - debug: var=autofs_started
+     - name: Task6 
+       service: name=ntpd state=restarted
+       register: ntp_started
+     - debug: var=ntp_started
+     - name: Task7
+       service: name=rsyslog state=restarted
+       register: syslog_started
+     - debug: var=syslog_started
